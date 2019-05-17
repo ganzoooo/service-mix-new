@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+    <rabbitmq enabled="1">
+        <username>bataka</username>
+        <password>bataka123</password>
+        <host>10.21.64.30</host>
+        <port>5672</port>
+        <vhost>/</vhost>
+    </rabbitmq>
+    <exchange>
+        <name>ocs.receive</name>
+        <queue>$ARTIFACT_ID.ocs.receive</queue>
+        <routing>ocs</routing>
+        <type>headers</type>
+        <ack>false</ack>
+        <queueparams>
+            <queueparam name="x-match">all</queueparam>
+            <queueparam name="type">ocs</queueparam>
+            <queueparam name="sender">$ARTIFACT_ID$</queueparam>
+        </queueparams>
+    </exchange>
+</config>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+    <rabbitmq enabled="1">
+        <username>bataka</username>
+        <password>bataka123</password>
+        <host>10.21.64.30</host>
+        <port>5672</port>
+        <vhost>/</vhost>
+    </rabbitmq>
+    <exchange>
+        <name>noti.receive</name>
+        <queue>$ARTIFACT_ID.noti.receive</queue>
+        <routing>noti</routing>
+        <type>fanout</type>
+        <ack>false</ack>
+    </exchange>
+</config>

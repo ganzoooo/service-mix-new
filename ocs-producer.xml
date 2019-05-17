@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+    <rabbitmq>
+        <username>bataka</username>
+        <password>bataka123</password>
+        <host>10.21.64.30</host>
+        <port>5672</port>
+        <vhost>/</vhost>
+    </rabbitmq>
+    <exchange>
+        <name>ocs.send</name>
+        <queue>ocs.send</queue>
+        <routing>ocs</routing>
+    </exchange>
+</config>

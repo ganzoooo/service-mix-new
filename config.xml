@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+    <server>
+        <port>8089</port>
+    </server>
+    <monitorport>9999</monitorport>
+    <databases>
+        <database name="mysql">
+            <driverclass>com.mysql.jdbc.Driver</driverclass>
+            <url>jdbc:mysql://127.0.0.1/newwsc</url>
+            <user>ebranch</user>
+            <password>pSkdlskfh8s8d8</password>
+            <minconn>1</minconn>
+            <maxxconn>5</maxxconn>
+        </database>
+        <database name="cube">
+            <driverclass>oracle.jdbc.driver.OracleDriver</driverclass>
+            <url>jdbc:oracle:thin:@ (DESCRIPTION =
+                (ADDRESS = (PROTOCOL = TCP)(HOST = 10.21.8.40)(PORT = 1521))
+                (ADDRESS = (PROTOCOL = TCP)(HOST = 10.21.8.41)(PORT = 1521))
+                (LOAD_BALANCE = yes)
+                (CONNECT_DATA =
+                (SERVER = DEDICATED)
+                (SERVICE_NAME = ACUBECBS)
+                (FAILOVER_MODE =
+                (TYPE = SELECT)
+                (METHOD = BASIC)
+                (RETRIES = 180)
+                (DELAY = 5))))
+            </url>
+            <user>unitelapp</user>
+            <password>unitelapp</password>
+            <minconn>5</minconn>
+            <maxxconn>10</maxxconn>
+        </database>
+        <database name="promo2">
+            <driverclass>oracle.jdbc.driver.OracleDriver</driverclass>
+            <url>jdbc:oracle:thin:@(DESCRIPTION =
+                (ADDRESS_LIST =
+                (ADDRESS = (PROTOCOL = TCP)(HOST = 10.21.64.252)(PORT = 1521))
+                )
+                (CONNECT_DATA =
+                (SERVICE_NAME = promo2)
+                )
+                )
+            </url>
+            <user>uni_conference</user>
+            <password>PAX5sUr1EybX</password>
+            <minconn>10</minconn>
+            <maxxconn>40</maxxconn>
+        </database>
+
+        <database name="csbs">
+            <driverclass>oracle.jdbc.driver.OracleDriver</driverclass>
+            <url>jdbc:oracle:thin:@(DESCRIPTION =
+                (ADDRESS_LIST =
+                (address = (protocol = tcp)(host = 10.88.88.4)(port = 1521))
+                (address = (protocol = tcp)(host = 10.88.88.5)(port = 1521)))
+                (CONNECT_DATA =
+                (SERVICE_NAME = CSBS)
+                (failover_mode =
+                (type = select)
+                (method = basic))))
+            </url>
+            <user>Uangel</user>
+            <password>uan93l#1234</password>
+            <minconn>1</minconn>
+            <maxxconn>5</maxxconn>
+        </database>
+        <database name="uloan">
+            <driverclass>oracle.jdbc.driver.OracleDriver</driverclass>
+            <url>jdbc:oracle:thin:@192.168.8.133:1521:uloan</url>
+            <user>sync</user>
+            <password>h5b5phum</password>
+            <minconn>1</minconn>
+            <maxxconn>5</maxxconn>
+        </database>
+        <database name="content">
+            <driverclass>oracle.jdbc.driver.OracleDriver</driverclass>
+            <url>
+                jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.8.244)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=content)))
+            </url>
+            <user>uni_core</user>
+            <password>k^D7nidzoR43EOF5%Gjx</password>
+            <minconn>1</minconn>
+            <maxxconn>5</maxxconn>
+        </database>
+        <database name="mdealer">
+            <driverclass>oracle.jdbc.driver.OracleDriver</driverclass>
+            <url>jdbc:oracle:thin:@(DESCRIPTION =(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.8.253)(PORT
+                = 1521)))(CONNECT_DATA =(SERVICE_NAME = MOBILEDEALER)))
+            </url>
+            <user>Mobiledealer</user>
+            <password>8asepAs67Drat5</password>
+            <minconn>1</minconn>
+            <maxxconn>5</maxxconn>
+        </database>
+        <database name="cat_change">
+            <driverclass>oracle.jdbc.driver.OracleDriver</driverclass>
+            <url>jdbc:oracle:thin:@(DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.8.254)(PORT
+                = 1521)))(CONNECT_DATA =(SERVICE_NAME = mdealer)))
+            </url>
+            <user>cat_change</user>
+            <password>6reThewUfu35hu</password>
+            <minconn>5</minconn>
+            <maxxconn>10</maxxconn>
+        </database>
+        <database name="uni_cms">
+            <driverclass>oracle.jdbc.driver.OracleDriver</driverclass>
+            <url>jdbc:oracle:thin:@(DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.8.254)(PORT
+                = 1521)))(CONNECT_DATA =(SERVICE_NAME = mdealer)))
+            </url>
+            <user>uni_cms</user>
+            <password>PVqXb2dh1H7ytCDS-Ajk</password>
+            <minconn>5</minconn>
+            <maxxconn>10</maxxconn>
+        </database>
+        <database name="promotion">
+            <driverclass>oracle.jdbc.driver.OracleDriver</driverclass>
+            <url>jdbc:oracle:thin:@(DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.8.254)(PORT
+                = 1521)))(CONNECT_DATA =(SERVICE_NAME = mdealer)))
+            </url>
+            <user>sync</user>
+            <password>h5b5phum</password>
+            <minconn>1</minconn>
+            <maxxconn>5</maxxconn>
+        </database>
+        <database name="uni_servicelog">
+            <driverclass>oracle.jdbc.driver.OracleDriver</driverclass>
+            <url>jdbc:oracle:thin:@(DESCRIPTION =
+                (ADDRESS_LIST =
+                (ADDRESS = (PROTOCOL = TCP)(HOST = 10.21.64.252)(PORT = 1521))
+                )
+                (CONNECT_DATA =
+                (SERVICE_NAME = promo2)
+                )
+                )
+            </url>
+            <user>uni_servicelog</user>
+            <password>servicelog</password>
+            <minconn>10</minconn>
+            <maxxconn>40</maxxconn>
+        </database>
+
+        <database name="uni_promotion">
+            <driverclass>oracle.jdbc.driver.OracleDriver</driverclass>
+            <url>jdbc:oracle:thin:@(DESCRIPTION =
+                (ADDRESS_LIST =
+                (ADDRESS = (PROTOCOL = TCP)(HOST = 10.21.64.252)(PORT = 1521))
+                )
+                (CONNECT_DATA =
+                (SERVICE_NAME = promo2)
+                )
+                )
+            </url>
+            <user>uni_promotion</user>
+            <password>promotion</password>
+            <minconn>10</minconn>
+            <maxxconn>40</maxxconn>
+        </database>
+        <database name="uni_service">
+            <driverclass>oracle.jdbc.driver.OracleDriver</driverclass>
+            <url>jdbc:oracle:thin:@(DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.8.246)(PORT
+                = 1521)))(CONNECT_DATA =(SERVICE_NAME = promotion)))
+            </url>
+            <user>uni_service</user>
+            <password>JvLDm2V8</password>
+            <minconn>5</minconn>
+            <maxxconn>10</maxxconn>
+        </database>
+    </databases>
+
+    <sms>
+        <producer>sms-producer.xml</producer>
+        <consumer>sms-consumer.xml</consumer>
+    </sms>
+    <ocs>
+        <producer>ocs-producer.xml</producer>
+        <consumer>ocs-consumer.xml</consumer>
+    </ocs>
+    <http>
+        <producer>http-producer.xml</producer>
+        <consumer>http-consumer.xml</consumer>
+    </http>
+    <diameter>
+        <producer>diameter-producer.xml</producer>
+        <consumer>diameter-consumer.xml</consumer>
+    </diameter>
+    <noti>
+        <consumer>noti-consumer.xml</consumer>
+    </noti>
+
+
+
+
+</config>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+    <rabbitmq enabled="1">
+        <username>bataka</username>
+        <password>bataka123</password>
+        <host>10.21.64.30</host>
+        <port>5672</port>
+        <vhost>/</vhost>
+    </rabbitmq>
+    <exchange>
+        <name>http.receive</name>
+        <queue>$ARTIFACT_ID.http.receive</queue>
+        <routing>http</routing>
+        <type>headers</type>
+        <ack>false</ack>
+        <queueparams>
+            <queueparam name="x-match">all</queueparam>
+            <queueparam name="type">http</queueparam>
+            <queueparam name="sender"></queueparam>
+        </queueparams>
+    </exchange>
+</config>

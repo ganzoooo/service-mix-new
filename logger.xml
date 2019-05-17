@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+    <appender name="CA" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <!--<param name="ConversionPattern" value="%-4r [%t] %-5p %c %x - %m%n" />-->
+            <param name="ConversionPattern" value="%-5p (%d{dd MMM yyyy HH:mm:ss.SSS}) [%t] %c:%L %x - %m%n" />
+        </layout>
+    </appender>
+    <appender name="R" class="org.apache.log4j.RollingFileAppender">
+        <param name="file" value="log/extgw.log" />
+        <param name="MaxFileSize" value="100MB" />
+        <!-- Keep one backup file -->
+        <param name="MaxBackupIndex" value="10" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <!--<param name="ConversionPattern" value="%-4r [%t] %-5p %c %x - %m%n" />-->
+            <param name="ConversionPattern" value="%-5p (%d{dd MMM yyyy HH:mm:ss.SSS}) [%t] %c:%L %x - %m%n" />
+        </layout>
+    </appender>
+    <appender name="D" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="log/extgw-daily.log" />
+        <param name="DatePattern" value="yyyy-MM-dd" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                   value="%-5p (%d{yyyy-MM-dd HH:mm:ss.SSS}) [%t] %c:%L %x - %m%n" />
+        </layout>
+    </appender>
+
+    <logger name="org.eclipse.jetty">
+        <level value="off" />
+    </logger>
+
+
+
+    <logger name="com.mchange.v2">
+        <level value="info"/>
+    </logger>
+
+    <logger name="snaq.db.ConnectionPool">
+        <level value="off" />
+    </logger>
+
+
+
+
+
+
+
+
+
+    <!--logger name="mn.unitel.rabbitmq.RabbitMQConsumer">
+        <level value="off" />
+    </logger-->
+
+    <!--logger name="mn.unitel.rabbitmq.message.RabbitMQMessage">
+        <level value="off" />
+    </logger-->
+
+
+    <!--logger name="mn.unitel.extgw.UChatStudent.UchatDbPoll">
+        <level value="off" />
+    </logger-->
+
+    <root>
+        <level value="debug" />
+        <!--appender-ref ref="CA" /-->
+        <appender-ref ref="CA" />
+    </root>
+</log4j:configuration>

@@ -1,0 +1,6 @@
+.idea/
+log/
+target/
+start.sh
+*.iml
+*.iws
